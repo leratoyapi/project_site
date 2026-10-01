@@ -1,0 +1,128 @@
+/* 1. RESET and THEME STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-gradient: linear-gradient(135deg, #0F111A 0%, #151821 50%, #1A1D28 100%);
+  --text-main: #E2E8F0;
+  --text-muted: #94A3B8;
+  --accent-color: #B39DDB;
+  --card-bg: rgba(20, 23, 35, 0.65);
+  --border-color: rgba(179, 157, 219, 0.2);
+  --nav-bg: rgba(15, 17, 26, 0.95);
+  --footer-bg: #0A0C14;
+}
+
+.light-mode {
+  --bg-gradient: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 50%, #CBD5E1 100%);
+  --text-main: #0F111A;
+  --text-muted: #475569;
+  --accent-color: #7E57C2;
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --border-color: rgba(126, 87, 194, 0.3);
+  --nav-bg: rgba(248, 250, 252, 0.95);
+  --footer-bg: #E2E8F0;
+}
+
+body {
+  background: var(--bg-gradient);
+  color: var(--text-main);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  padding-bottom: 80px; 
+  overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* 2. The Navigation bar */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: var(--nav-bg);
+  padding: 15px 40px;
+  z-index: 1000;
+  border-bottom: 1px solid var(--border-color);
+  backdrop-filter: blur(10px);
+}
+
+.nav-brand p {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav-brand i {
+  color: var(--accent-color);
+  font-style: normal;
+  text-shadow: 0 0 10px rgba(179, 157, 219, 0.3);
+}
+
+.nav-bar ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-bar a {
+  padding: 8px 16px;
+  color: var(--text-main);
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 20px;
+}
+
+.nav-bar a:hover, .nav-bar a.router-link-active {
+  color: var(--accent-color);
+  background: rgba(179, 157, 219, 0.1);
+}
+
+.theme-toggle {
+  background: transparent;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: var(--accent-color);
+  color: var(--nav-bg);
+}
+
+
+
+
+.home-viewport {
+  min-height: calc(100vh - 72px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background: radial-gradient(circle at 50% 50%, rgba(45, 38, 70, 0.1), transparent 70%);
+}
+
+.home-master-box {
+  max-width: 900px;
+  width: 100%;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  padding: 45px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 20px 45px -12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
